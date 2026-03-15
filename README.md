@@ -11,9 +11,9 @@ This repository complements the backend project by adding **system API tests and
 
 ---
 
-# System Under Test (SUT)
+## System Under Test (SUT)
 
-RealWorld Example App is a synchronous REST API application.
+The RealWorld Example App is a synchronous REST API application.
 
 **Key characteristics**
 
@@ -35,7 +35,7 @@ RealWorld Example App is a synchronous REST API application.
 
 ---
 
-# Architecture of SUT
+## SUT Architecture
 
 
       Client
@@ -54,7 +54,7 @@ RealWorld Example App is a synchronous REST API application.
 
 
 ---
-# Existing Test Coverage (Backend Project)
+## Existing Backend Test Coverage
 
 The backend repository already contains tests at the following levels.
 
@@ -82,7 +82,7 @@ The backend project **does not contain system-level API tests** that verify the 
 
 ---
 
-# Risk Analysis
+## Risk Analysis
 
 ### Data integrity
 
@@ -107,7 +107,7 @@ The backend project **does not contain system-level API tests** that verify the 
 
 ---
 
-# Test Scope
+## Test Scope
 
 This repository focuses on **system-level testing of the RealWorld API**.
 
@@ -137,13 +137,18 @@ Example scenarios:
 
 ---
 
-# Test Strategy
+## Test Strategy
 
-Unit tests → Repository integration tests → Service integration tests → System API tests
+Testing layers in the overall system:
+
+1. Unit tests
+2. Repository integration tests
+3. Service integration tests
+4. System API tests (this project)
 
 ---
 
-# Example Test Scenarios
+## Example System Test Scenarios
 
 Examples of system-level scenarios covered by tests:
 
@@ -164,7 +169,7 @@ Concurrency scenarios:
 
 ---
 
-# Test Environment
+## Test Environment
 
 - Java 17
 - Docker
@@ -173,7 +178,7 @@ Concurrency scenarios:
 
 ---
 
-# CI Strategy
+## CI Strategy
 
 The CI pipeline runs:
 
