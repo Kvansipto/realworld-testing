@@ -11,7 +11,7 @@ This repository complements the backend project by adding **system API tests and
 
 ---
 
-# System Under Test
+# System Under Test (SUT)
 
 RealWorld Example App is a synchronous REST API application.
 
@@ -35,7 +35,7 @@ RealWorld Example App is a synchronous REST API application.
 
 ---
 
-# Architecture
+# Architecture of SUT
 
 
       Client
