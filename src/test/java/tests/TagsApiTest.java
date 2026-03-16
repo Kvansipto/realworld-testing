@@ -1,3 +1,5 @@
+package tests;
+
 import io.realworld.api.TagsApi;
 import org.junit.jupiter.api.Test;
 

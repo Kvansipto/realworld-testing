@@ -2,11 +2,14 @@ package io.realworld.api;
 
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import tools.jackson.databind.ObjectMapper;
 
 import static io.restassured.RestAssured.enableLoggingOfRequestAndResponseIfValidationFails;
 import static io.restassured.RestAssured.given;
 
 public class RestClient {
+
+    protected static final ObjectMapper MAPPER = new ObjectMapper();
 
     static {
         enableLoggingOfRequestAndResponseIfValidationFails();
