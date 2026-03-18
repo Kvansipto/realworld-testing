@@ -1,5 +1,6 @@
 package io.realworld.api;
 
+import io.realworld.dto.LoginRequest;
 import io.realworld.dto.UserRegisterRequest;
 import io.realworld.dto.UserRegisterResponse;
 
@@ -14,6 +15,33 @@ public class UsersApi extends RestClient {
                 .post("/users")
                 .then()
                 .statusCode(201)
+                .extract()
+                .jsonPath()
+                .getMap("user");
+
+        return MAPPER.convertValue(responseMap, UserRegisterResponse.class);
+    }
+
+    public UserRegisterResponse login(LoginRequest request) {
+
+        var responseMap = request()
+                .body(Map.of("user", request))
+                .post("/users/login")
+                .then()
+                .statusCode(200)
+                .extract()
+                .jsonPath()
+                .getMap("user");
+
+        return MAPPER.convertValue(responseMap, UserRegisterResponse.class);
+    }
+
+    public UserRegisterResponse getCurrentUser(String token) {
+
+        var responseMap = authorized(token)
+                .get("/user")
+                .then()
+                .statusCode(200)
                 .extract()
                 .jsonPath()
                 .getMap("user");

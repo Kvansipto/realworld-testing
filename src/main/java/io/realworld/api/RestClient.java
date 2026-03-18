@@ -23,4 +23,9 @@ public class RestClient {
                 .contentType(ContentType.JSON)
                 .log().ifValidationFails();
     }
+
+    protected RequestSpecification authorized(String token) {
+        return request()
+                .header("Authorization", "Token " + token);
+    }
 }
